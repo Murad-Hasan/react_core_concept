@@ -1,16 +1,29 @@
-import { Component } from 'react';
-import Profile from './profile/index';
-import MyProps from './props';
+import { Component } from "react";
+import Bio from "./profile/bio";
+import Profile from "./profile/index";
+import Skills from "./profile/skill";
 class App extends Component {
   render() {
     return (
       <div>
         <Profile />
-        <div style={{margin: "10px auto", width: "60%"}}>
-          <h3>List of Programmers</h3>
-         <MyProps name='Murad'/>
-         <MyProps name='Murad Hasan'/>
-        </div>
+        <Bio name='Hasan' title='junior developer' />
+        <p>Mr.X</p>
+        <Skills 
+          heading='Skills'
+          skillA='vue'
+          skillB='svelte'
+          skillC='angular'
+          skillD='React'
+        />
+        <p>Mr.Y</p>
+        <Skills 
+          heading='Skills'
+          skillA='Kotlin'
+          skillB='Java'
+          skillC='Go'
+          skillD='C++'
+        />
       </div>
     );
   }
