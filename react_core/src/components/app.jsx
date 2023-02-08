@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
-
+import { Component } from 'react';
+import Profile from './profile/index';
+import MyProps from './props';
 class App extends Component {
   render() {
     return (
       <div>
-        <h1>Hello World!</h1>
+        <Profile />
+        <div style={{margin: "10px auto", width: "60%"}}>
+          <h3>List of Programmers</h3>
+         <MyProps name='Murad'/>
+         <MyProps name='Murad Hasan'/>
+        </div>
       </div>
     );
   }
