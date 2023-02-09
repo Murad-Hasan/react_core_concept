@@ -1,7 +1,4 @@
 import { Component } from "react";
-import Bio from "./profile/bio";
-import Profile from "./profile/index";
-import Skills from "./profile/skill";
 
 // class Child extends Component {
 //   render() {
@@ -10,23 +7,28 @@ import Skills from "./profile/skill";
 //   }
 // }
 
-const ChildComponent = (props) => {
-  return(
-    <div>
-    <h1>I am child</h1>
-    <p>I don't know what to do</p>
-    {props.children}
-  </div>
-  )
-};
+// const ChildComponent = (props) => {
+//   return(
+//     <div>
+//     <h1>I am child</h1>
+//     <p>I don't know what to do</p>
+//     {props.children}
+//   </div>
+//   )
+// };
 
 class App extends Component {
   getContext(context) {
     console.log(context);
   }
+  state = {
+    count: 0,
+  }
   render() {
+  
     return (
-      <div>
+      <>
+        {/* <div>
         <Profile />
         <Bio name='Hasan' title='junior developer' />
         <p>Mr.X</p>
@@ -45,11 +47,20 @@ class App extends Component {
           skillC='Go'
           skillD='C++'
         />
-        {/* <Child func={this.getContext} /> */}
+        <Child func={this.getContext} /> 
         <ChildComponent>
           <p>I am child from parents</p>
         </ChildComponent>
+      </div> */}
+<h1>Murad</h1>
+      <div>
+        <h1>Counter</h1>
+        <p>{this.state.count}</p> 
+        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Increment
+        </button>
       </div>
+      </>
     );
   }
 }
