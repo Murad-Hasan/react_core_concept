@@ -23,6 +23,7 @@ class App extends Component {
   }
   state = {
     count: 0,
+    lotOfProperties:{}
   }
   render() {
   
@@ -56,7 +57,14 @@ class App extends Component {
       <div>
         <h1>Counter</h1>
         <p>{this.state.count}</p> 
-        <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+        {/* <button onClick={() => this.setState({ count: this.state.count + 1 })}>
+          Increment
+        </button> */}
+        {/* Another method async function*/}
+        <button onClick={() => this.setState(
+          (prevState) => ({count: prevState.count + 1}),
+          () => console.log('Count',this.state.count)
+        )}>
           Increment
         </button>
       </div>
