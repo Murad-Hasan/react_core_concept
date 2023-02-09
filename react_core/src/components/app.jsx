@@ -3,12 +3,12 @@ import Bio from "./profile/bio";
 import Profile from "./profile/index";
 import Skills from "./profile/skill";
 
-class Child extends Component {
-  render() {
-    this.props.func(this);
-    return <h1>I am child</h1>;
-  }
-}
+// class Child extends Component {
+//   render() {
+//     this.props.func(this);
+//     return <h1>I am child</h1>;
+//   }
+// }
 
 const ChildComponent = (props) => {
   return(
