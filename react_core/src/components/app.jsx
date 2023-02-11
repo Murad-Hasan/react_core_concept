@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Timer from "./simpleTimer";
 
 // class Child extends Component {
 //   render() {
@@ -53,21 +54,22 @@ class App extends Component {
           <p>I am child from parents</p>
         </ChildComponent>
       </div> */}
-<h1>Murad</h1>
-      <div>
+{/* <h1>Murad</h1> */}
+      {/* <div>
         <h1>Counter</h1>
-        <p>{this.state.count}</p> 
+        <p>{this.state.count}</p>  */}
         {/* <button onClick={() => this.setState({ count: this.state.count + 1 })}>
           Increment
         </button> */}
         {/* Another method async function*/}
-        <button onClick={() => this.setState(
+        {/* <button onClick={() => this.setState(
           (prevState) => ({count: prevState.count + 1}),
           () => console.log('Count',this.state.count)
         )}>
           Increment
         </button>
-      </div>
+      </div> */}
+      <Timer/>
       </>
     );
   }
