@@ -1,4 +1,5 @@
 import { Component } from "react";
+import Input from "./input";
 import Timer from "./simpleTimer";
 
 // class Child extends Component {
@@ -70,6 +71,7 @@ class App extends Component {
         </button>
       </div> */}
       <Timer/>
+      <Input/>
       </>
     );
   }
