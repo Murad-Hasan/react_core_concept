@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Button from "./Button";
+import TimerCount from "./timerCount";
 
 class Timer extends Component {
   state = {
@@ -42,43 +44,43 @@ class Timer extends Component {
   render() {
     return (
       <div className='container mx-auto text-center'>
-        <h1 className="text-2xl font-bold py-2">Simple Timer</h1>
+        <h1 className='text-2xl font-bold py-2'>Simple Timer</h1>
         <div className='border p-5 border-green-500'>
           <div className='timer__section'>
-            <button
-              className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold active:scale-90 rounded hover:text-white px-2 border border-blue-500 hover:border-transparent'
-              onClick={this.decrementCount}
-            >
-              -
-            </button>
-            <span className='px-2'>{this.state.count}</span>
-            <button
-              className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold active:scale-90 rounded hover:text-white px-2 border border-blue-500 hover:border-transparent'
-              onClick={this.incrementCount}
+            <Button
+              btnStyle='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold active:scale-90 rounded hover:text-white px-2 border border-blue-500 hover:border-transparent'
+              event={this.decrementCount}
             >
               {" "}
-              +{" "}
-            </button>
+              -{" "}
+            </Button>
+            <TimerCount style="p-2 text-2xl font-bold">{this.state.count}s</TimerCount>
+            <Button
+              btnStyle='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold active:scale-90 rounded hover:text-white px-2 border border-blue-500 hover:border-transparent'
+              event={this.incrementCount}
+            >
+              +
+            </Button>
           </div>
           <div className='stop__watch py-3'>
-            <button
-              onClick={this.startTimer}
-              className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 active:scale-90 hover:border-transparent rounded ml-2'
+            <Button
+              event={this.startTimer}
+              btnStyle='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 active:scale-90 hover:border-transparent rounded ml-2'
             >
               Start
-            </button>
-            <button
-              onClick={this.stopTimer}
-              className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 active:scale-90 hover:border-transparent rounded ml-2'
+            </Button>
+            <Button
+              event={this.stopTimer}
+              btnStyle='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 active:scale-90 hover:border-transparent rounded ml-2'
             >
               Stop
-            </button>
-            <button
-              onClick={this.resetTimer}
-              className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 active:scale-90 hover:border-transparent rounded ml-2'
+            </Button>
+            <Button
+              event={this.resetTimer}
+              btnStyle='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 active:scale-90 hover:border-transparent rounded ml-2'
             >
               Reset
-            </button>
+            </Button>
           </div>
         </div>
       </div>
